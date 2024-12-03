@@ -1,8 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache \
-    --repository https://dl-cdn.alpinelinux.org/alpine/edge/testing/ \
-    openconnect \
+RUN apk add --no-cache openconnect \
     && apk add --no-cache openvpn openssh \
     && apk add --no-cache py3-pip \
     && apk add --no-cache bind-tools curl \
