@@ -5,7 +5,7 @@ RUN apk add --no-cache openconnect \
     && apk add --no-cache py3-pip \
     && apk add --no-cache bind-tools curl \
     && apk add --no-cache supervisor \
-    && apk add --no-cache py3-pproxy \
+    && pip install pproxy --break-system-packages
 
 # Fix Cannot open "/proc/sys/net/ipv4/route/flush": Read-only file system
 # See https://serverfault.com/questions/878443/when-running-vpnc-in-docker-get-cannot-open-proc-sys-net-ipv4-route-flush 
